@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.airmap.airmapsdk.ui.views.AirMapMapView
+        android:id="@+id/mapview"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        app:mapbox_uiCompass="false"
+        app:mapbox_uiRotateGestures="false"
+        app:mapbox_uiLogo="true"
+        app:mapbox_uiLogoGravity="bottom|left"
+        app:mapbox_uiAttribution="false"
+        app:mapbox_cameraTargetLat="34.015027991104574"
+        app:mapbox_cameraTargetLng="-118.49517485165802"
+        app:mapbox_cameraZoom="15.5"/>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/bottom_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/map_border"
+        app:layout_constraintTop_toBottomOf="@id/mapview"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.airmap.geofencingsdkexample.view.CustomTabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tabGravity="fill"
+            app:tabMaxWidth="0dp"
+            app:tabMode="fixed"
+            app:tabPaddingBottom="0dp"
+            app:tabPaddingEnd="0dp"
+            app:tabPaddingStart="0dp"
+            app:tabPaddingTop="0dp" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/light_grey"
+            app:layout_constraintTop_toBottomOf="@id/tab_layout"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fly_button"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        app:layout_constraintBottom_toTopOf="@id/bottom_container"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_play_arrow" />
+
+</android.support.constraint.ConstraintLayout>

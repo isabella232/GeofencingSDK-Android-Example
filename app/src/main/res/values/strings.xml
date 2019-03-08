@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">GeofencingSDK Example</string>
+    <string name="flight_plan_area">Flight Plan Area</string>
+</resources>

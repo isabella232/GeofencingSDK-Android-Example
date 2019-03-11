@@ -101,6 +101,9 @@ If the status level is approaching or entering, the status will include proximit
 
 An API Key can be obtained from our [Developer Portal](https://dashboard.airmap.io/developer).
 
+## Terms of Service
+
+By using this SDK, you are agreeing to the [AirMap Developer Terms & Conditions](https://www.airmap.com/developer-terms-service/)
 
 ## License
 
